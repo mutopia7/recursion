@@ -10,7 +10,7 @@ function fibs(num){
     }
     else if (num > 2) {
         fibs.push(first);
-        fibs.push(second)
+        fibs.push(second);
 
         for (let index = 2; index < num; index++) {
             let newMember = first + second;
@@ -24,8 +24,20 @@ function fibs(num){
     return fibs
 }
 
+function fibsRec(num, memo = {}) {
+    console.log(`fibsRec(${num}) called`);
+    if (num == 1) return [0];
+    if (num == 2) return [0, 1];
+    
+    if (memo[num]) return memo[num];
+    
+    const prev = fibsRec(num - 1, memo);
+    const nextNum = prev[prev.length - 1] + prev[prev.length - 2];
+    const result = [...prev, nextNum];
+    
+    memo[num] = result;
+    
+    return result;
+}
 
-
-
-
-console.log(fibs(3))
+console.log(fibsRec(9))
