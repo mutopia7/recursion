@@ -17,16 +17,16 @@ console.log(fibs(9));      // Output: [0,1,1,2,3,5,8,13,21]
 console.log(fibsRec(9));   // Output: [0,1,1,2,3,5,8,13,21]
 
 
-# Merge Sort Algorithm
+## Merge Sort Algorithm
 
 This repository contains an implementation of the **Merge Sort** algorithm in JavaScript. Merge Sort is an efficient, general-purpose, comparison-based sorting algorithm that uses a divide-and-conquer approach to recursively split the array and merge sorted subarrays.
 
-## 📚 How It Works
+### 📚 How It Works
 1. **Divide**: The input array is recursively divided into two halves until each subarray contains a single element (or no elements).
 2. **Conquer**: The sorted subarrays are merged together by comparing elements and creating a new sorted array.
 3. **Combine**: This process continues until all subarrays are merged into a fully sorted array.
 
-### 🧩 Key Functions
+#### 🧩 Key Functions
 - **`mergeSort(array)`**: Recursively splits and sorts the array.
 - **`merge(leftArray, rightArray)`**: Merges two sorted arrays into a single sorted array.
 
